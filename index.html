@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--  <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -12,6 +12,79 @@
     <button type="button" onclick="alert(findProdutoPorNome(prompt('Digite o nome do produto:')))">Encontrar Produto por Nome</button>
     <button type="button" onclick="alert(verificaProduto(prompt('Digite o nome do produto para verificar:')))">Verificar Produto</button>
     <button type="button" onclick="ordenarProdutosPorPreco()">Ordenar Produtos por Preço</button>
-    <button type="button" onclick="inverterProdutos()">Inverter Ordem dos Produtos</button>
+    <button type="button" onclick="inverterProdutos()">Inverter Ordem dos Produtos</button> -->
+
+    <!-- <hr>  -->
+    
+    <h3>Exercicio</h3>
+    <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela com For Each</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<table id="tabela">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Idade</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- As linhas da tabela serão inseridas aqui -->
+    </tbody>
+</table>
+
+<script>
+    // Array de objetos
+    const pessoas = [
+        { id: 1, nome: 'João', idade: 25 },
+        { id: 2, nome: 'Maria', idade: 20 },
+        { id: 3, nome: 'Pedro', idade: 22 }
+    ];
+
+    // Seleciona o corpo da tabela
+    const tbody = document.getElementById('tabela').getElementsByTagName('tbody')[0];
+
+    // Usa forEach para percorrer o array e adicionar linhas na tabela
+    pessoas.forEach(pessoa => {
+        const row = tbody.insertRow(); // Cria uma nova linha
+
+        // Cria células e define seu conteúdo
+        const cellId = row.insertCell(0);
+        cellId.textContent = pessoa.id;
+
+        const cellNome = row.insertCell(1);
+        cellNome.textContent = pessoa.nome;
+
+        const cellIdade = row.insertCell(2);
+        cellIdade.textContent = pessoa.idade;
+    });
+</script>
+
+</body>
+</html>
+
+
+
 </body>
 </html>
